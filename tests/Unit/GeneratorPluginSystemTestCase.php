@@ -1,14 +1,14 @@
 <?php
 
-namespace Mpociot\ApiDoc\Tests\Unit;
+namespace Codise\ApiDoc\Tests\Unit;
 
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
 use Illuminate\Routing\Route;
-use Mpociot\ApiDoc\ApiDocGeneratorServiceProvider;
-use Mpociot\ApiDoc\Extracting\Generator;
-use Mpociot\ApiDoc\Extracting\Strategies\Strategy;
-use Mpociot\ApiDoc\Tests\Fixtures\TestController;
-use Mpociot\ApiDoc\Tools\DocumentationConfig;
+use Codise\ApiDoc\ApiDocGeneratorServiceProvider;
+use Codise\ApiDoc\Extracting\Generator;
+use Codise\ApiDoc\Extracting\Strategies\Strategy;
+use Codise\ApiDoc\Tests\Fixtures\TestController;
+use Codise\ApiDoc\Tools\DocumentationConfig;
 use ReflectionClass;
 use ReflectionMethod;
 
@@ -17,7 +17,7 @@ class GeneratorPluginSystemTestCase extends LaravelGeneratorTest
     use ArraySubsetAsserts;
 
     /**
-     * @var \Mpociot\ApiDoc\Extracting\Generator
+     * @var \Codise\ApiDoc\Extracting\Generator
      */
     protected $generator;
 

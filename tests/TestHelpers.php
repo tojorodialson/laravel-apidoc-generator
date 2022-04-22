@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpociot\ApiDoc\Tests;
+namespace Codise\ApiDoc\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
 

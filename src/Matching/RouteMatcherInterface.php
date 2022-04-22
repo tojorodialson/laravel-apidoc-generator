@@ -1,8 +1,8 @@
 <?php
 
-namespace Mpociot\ApiDoc\Matching;
+namespace Codise\ApiDoc\Matching;
 
-use Mpociot\ApiDoc\Matching\RouteMatcher\Match;
+use Codise\ApiDoc\Matching\RouteMatcher\Match;
 
 interface RouteMatcherInterface
 {

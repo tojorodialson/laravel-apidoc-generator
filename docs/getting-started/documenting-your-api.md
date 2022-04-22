@@ -232,8 +232,8 @@ Examples:
 ```php
 
 /**
- * @apiResourceCollection Mpociot\ApiDoc\Tests\Fixtures\UserResource
- * @apiResourceModel Mpociot\ApiDoc\Tests\Fixtures\User
+ * @apiResourceCollection Codise\ApiDoc\Tests\Fixtures\UserResource
+ * @apiResourceModel Codise\ApiDoc\Tests\Fixtures\User
  */
 public function listUsers()
 {
@@ -241,8 +241,8 @@ public function listUsers()
 }
 
 /**
- * @apiResourceCollection Mpociot\ApiDoc\Tests\Fixtures\UserCollection
- * @apiResourceModel Mpociot\ApiDoc\Tests\Fixtures\User
+ * @apiResourceCollection Codise\ApiDoc\Tests\Fixtures\UserCollection
+ * @apiResourceModel Codise\ApiDoc\Tests\Fixtures\User
  */
 public function listMoreUsers()
 {
@@ -250,8 +250,8 @@ public function listMoreUsers()
 }
 
 /**
- * @apiResourceCollection Mpociot\ApiDoc\Tests\Fixtures\UserResource
- * @apiResourceModel Mpociot\ApiDoc\Tests\Fixtures\User
+ * @apiResourceCollection Codise\ApiDoc\Tests\Fixtures\UserResource
+ * @apiResourceModel Codise\ApiDoc\Tests\Fixtures\User
  */
 public function showUser(User $user)
 {

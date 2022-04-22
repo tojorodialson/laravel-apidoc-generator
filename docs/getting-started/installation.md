@@ -8,14 +8,14 @@ order: 1
 You can install Laravel API Documentation Generator using composer:
 
 ```bash
-composer require mpociot/laravel-apidoc-generator
+composer require codise/laravel-apidoc-generator
 ```
 
 ## Laravel
 Publish the config file by running:
 
 ```bash
-php artisan vendor:publish --provider="Mpociot\ApiDoc\ApiDocGeneratorServiceProvider" --tag=apidoc-config
+php artisan vendor:publish --provider="Codise\ApiDoc\ApiDocGeneratorServiceProvider" --tag=apidoc-config
 ```
 This will create an `apidoc.php` file in your `config` folder.
 
@@ -23,10 +23,10 @@ This will create an `apidoc.php` file in your `config` folder.
 Register the service provider in your `bootstrap/app.php`:
 
 ```php
-$app->register(\Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class);
+$app->register(\Codise\ApiDoc\ApiDocGeneratorServiceProvider::class);
 ```
 
-Next, copy the config file from `vendor/mpociot/laravel-apidoc-generator/config/apidoc.php` to your project as `config/apidoc.php`. 
+Next, copy the config file from `vendor/codise/laravel-apidoc-generator/config/apidoc.php` to your project as `config/apidoc.php`. 
 
 Then add to your `bootstrap/app.php`:
 

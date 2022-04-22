@@ -45,7 +45,7 @@ php artisan apidoc:rebuild
  - Publish the vendor views by running:
  
  ```bash
- php artisan vendor:publish --provider="Mpociot\ApiDoc\ApiDocGeneratorServiceProvider" --tag=apidoc-views
+ php artisan vendor:publish --provider="Codise\ApiDoc\ApiDocGeneratorServiceProvider" --tag=apidoc-views
  ```
  
  This will copy the views files to `\resources\views\vendor\apidoc`.

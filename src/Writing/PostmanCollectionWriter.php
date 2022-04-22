@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpociot\ApiDoc\Writing;
+namespace Codise\ApiDoc\Writing;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\URL;

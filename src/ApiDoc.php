@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpociot\ApiDoc;
+namespace Codise\ApiDoc;
 
 use Illuminate\Support\Facades\Route;
 
@@ -16,7 +16,7 @@ class ApiDoc
     public static function routes($path = '/doc')
     {
         Route::prefix($path)
-            ->namespace('\Mpociot\ApiDoc\Http')
+            ->namespace('\Codise\ApiDoc\Http')
             ->middleware(static::middleware())
             ->group(function () {
                 Route::get('/', 'Controller@html')->name('apidoc');

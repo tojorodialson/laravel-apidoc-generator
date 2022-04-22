@@ -8,12 +8,6 @@
         "Laravel"
     ],
     "homepage": "http://github.com/tojorodialson/laravel-apidoc-generator",
-    "authors": [
-        {
-            "name": "Marcel Pociot",
-            "email": "m.pociot@gmail.com"
-        }
-    ],
     "require": {
         "php": ">=7.2.0",
         "ext-json": "*",
@@ -41,12 +35,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Mpociot\\ApiDoc\\": "src/"
+            "Codise\\ApiDoc\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mpociot\\ApiDoc\\Tests\\": "tests/"
+            "Codise\\ApiDoc\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -57,7 +51,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mpociot\\ApiDoc\\ApiDocGeneratorServiceProvider"
+                "Codise\\ApiDoc\\ApiDocGeneratorServiceProvider"
             ]
         },
         "branch-alias": {

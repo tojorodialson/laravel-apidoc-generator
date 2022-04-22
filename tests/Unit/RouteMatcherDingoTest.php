@@ -1,10 +1,10 @@
 <?php
 
-namespace Mpociot\ApiDoc\Tests\Unit;
+namespace Codise\ApiDoc\Tests\Unit;
 
 use Dingo\Api\Routing\Router;
 use Illuminate\Support\Str;
-use Mpociot\ApiDoc\Matching\RouteMatcher;
+use Codise\ApiDoc\Matching\RouteMatcher;
 use Orchestra\Testbench\TestCase;
 
 /**

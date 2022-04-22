@@ -24,20 +24,20 @@ composer require --dev codise/laravel-apidoc-generator
 Publish the config file by running:
 
 ```bash
-php artisan vendor:publish --provider="Mpociot\ApiDoc\ApiDocGeneratorServiceProvider" --tag=apidoc-config
+php artisan vendor:publish --provider="Codise\ApiDoc\ApiDocGeneratorServiceProvider" --tag=apidoc-config
 ```
 
 This will create an `apidoc.php` file in your `config` folder.
 
 ### Lumen
-- When using Lumen, you will need to run `composer require mpociot/laravel-apidoc-generator` instead.
+- When using Lumen, you will need to run `composer require codise/laravel-apidoc-generator` instead.
 - Register the service provider in your `bootstrap/app.php`:
 
 ```php
-$app->register(\Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class);
+$app->register(\Codise\ApiDoc\ApiDocGeneratorServiceProvider::class);
 ```
 
-- Copy the config file from `vendor/mpociot/laravel-apidoc-generator/config/apidoc.php` to your project as `config/apidoc.php`. Then add to your `bootstrap/app.php`:
+- Copy the config file from `vendor/codise/laravel-apidoc-generator/config/apidoc.php` to your project as `config/apidoc.php`. Then add to your `bootstrap/app.php`:
 
 ```php
 $app->configure('apidoc');

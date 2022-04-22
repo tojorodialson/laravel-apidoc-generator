@@ -1,12 +1,12 @@
 <?php
 
-namespace Mpociot\ApiDoc\Extracting;
+namespace Codise\ApiDoc\Extracting;
 
 use Illuminate\Routing\Route;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use Mpociot\ApiDoc\Tools\DocumentationConfig;
-use Mpociot\ApiDoc\Tools\Utils;
+use Codise\ApiDoc\Tools\DocumentationConfig;
+use Codise\ApiDoc\Tools\Utils;
 use ReflectionClass;
 use ReflectionMethod;
 
@@ -139,26 +139,26 @@ class Generator
     {
         $defaultStrategies = [
             'metadata' => [
-                \Mpociot\ApiDoc\Extracting\Strategies\Metadata\GetFromDocBlocks::class,
+                \Codise\ApiDoc\Extracting\Strategies\Metadata\GetFromDocBlocks::class,
             ],
             'urlParameters' => [
-                \Mpociot\ApiDoc\Extracting\Strategies\UrlParameters\GetFromUrlParamTag::class,
+                \Codise\ApiDoc\Extracting\Strategies\UrlParameters\GetFromUrlParamTag::class,
             ],
             'queryParameters' => [
-                \Mpociot\ApiDoc\Extracting\Strategies\QueryParameters\GetFromQueryParamTag::class,
+                \Codise\ApiDoc\Extracting\Strategies\QueryParameters\GetFromQueryParamTag::class,
             ],
             'headers' => [
-                \Mpociot\ApiDoc\Extracting\Strategies\RequestHeaders\GetFromRouteRules::class,
+                \Codise\ApiDoc\Extracting\Strategies\RequestHeaders\GetFromRouteRules::class,
             ],
             'bodyParameters' => [
-                \Mpociot\ApiDoc\Extracting\Strategies\BodyParameters\GetFromBodyParamTag::class,
+                \Codise\ApiDoc\Extracting\Strategies\BodyParameters\GetFromBodyParamTag::class,
             ],
             'responses' => [
-                \Mpociot\ApiDoc\Extracting\Strategies\Responses\UseTransformerTags::class,
-                \Mpociot\ApiDoc\Extracting\Strategies\Responses\UseResponseTag::class,
-                \Mpociot\ApiDoc\Extracting\Strategies\Responses\UseResponseFileTag::class,
-                \Mpociot\ApiDoc\Extracting\Strategies\Responses\UseApiResourceTags::class,
-                \Mpociot\ApiDoc\Extracting\Strategies\Responses\ResponseCalls::class,
+                \Codise\ApiDoc\Extracting\Strategies\Responses\UseTransformerTags::class,
+                \Codise\ApiDoc\Extracting\Strategies\Responses\UseResponseTag::class,
+                \Codise\ApiDoc\Extracting\Strategies\Responses\UseResponseFileTag::class,
+                \Codise\ApiDoc\Extracting\Strategies\Responses\UseApiResourceTags::class,
+                \Codise\ApiDoc\Extracting\Strategies\Responses\ResponseCalls::class,
             ],
         ];
 

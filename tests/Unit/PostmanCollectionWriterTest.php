@@ -1,9 +1,9 @@
 <?php
 
-namespace Mpociot\ApiDoc\Tests\Unit;
+namespace Codise\ApiDoc\Tests\Unit;
 
 use Illuminate\Support\Collection;
-use Mpociot\ApiDoc\Writing\PostmanCollectionWriter;
+use Codise\ApiDoc\Writing\PostmanCollectionWriter;
 use Orchestra\Testbench\TestCase;
 
 class PostmanCollectionWriterTest extends TestCase

@@ -1,10 +1,10 @@
 <?php
 
-namespace Mpociot\ApiDoc\Tests\Unit;
+namespace Codise\ApiDoc\Tests\Unit;
 
 use Dingo\Api\Routing\Router;
-use Mpociot\ApiDoc\ApiDocGeneratorServiceProvider;
-use Mpociot\ApiDoc\Tests\Fixtures\TestController;
+use Codise\ApiDoc\ApiDocGeneratorServiceProvider;
+use Codise\ApiDoc\Tests\Fixtures\TestController;
 
 /**
  * @group dingo

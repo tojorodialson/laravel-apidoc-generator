@@ -21,7 +21,7 @@ There are a number of strategies included with the package, so you don't have to
 > Note: The included ResponseCalls strategy is designed to stop if a response with a 2xx status code has already been gotten via any other strategy.
 
 ## Strategies
-To create a strategy, create a class that extends `\Mpociot\ApiDoc\Extracting\Strategies\Strategy`.
+To create a strategy, create a class that extends `\Codise\ApiDoc\Extracting\Strategies\Strategy`.
 
 The `__invoke` method of the strategy is where you perform your actions and return data. It receives the following arguments:
 - the route (instance of `\Illuminate\Routing\Route`)
@@ -34,7 +34,7 @@ The `__invoke` method of the strategy is where you perform your actions and retu
  
  ```php
 use Illuminate\Routing\Route;
-use Mpociot\ApiDoc\Extracting\Strategies\Strategy;
+use Codise\ApiDoc\Extracting\Strategies\Strategy;
 
 class AddOrganizationIdBodyParameter extends Strategy
 {
@@ -58,26 +58,26 @@ The last thing to do is to register the strategy. Strategies are registered in a
 ...
     'strategies' => [
         'metadata' => [
-            \Mpociot\ApiDoc\Extracting\Strategies\Metadata\GetFromDocBlocks::class,
+            \Codise\ApiDoc\Extracting\Strategies\Metadata\GetFromDocBlocks::class,
         ],
         'urlParameters' => [
-            \Mpociot\ApiDoc\Extracting\Strategies\UrlParameters\GetFromUrlParamTag::class,
+            \Codise\ApiDoc\Extracting\Strategies\UrlParameters\GetFromUrlParamTag::class,
         ],
         'queryParameters' => [
-            \Mpociot\ApiDoc\Extracting\Strategies\QueryParameters\GetFromQueryParamTag::class,
+            \Codise\ApiDoc\Extracting\Strategies\QueryParameters\GetFromQueryParamTag::class,
         ],
         'headers' => [
-            \Mpociot\ApiDoc\Extracting\Strategies\RequestHeaders\GetFromRouteRules::class,
+            \Codise\ApiDoc\Extracting\Strategies\RequestHeaders\GetFromRouteRules::class,
         ],
         'bodyParameters' => [
-            \Mpociot\ApiDoc\Extracting\Strategies\BodyParameters\GetFromBodyParamTag::class,
+            \Codise\ApiDoc\Extracting\Strategies\BodyParameters\GetFromBodyParamTag::class,
         ],
         'responses' => [
-            \Mpociot\ApiDoc\Extracting\Strategies\Responses\UseTransformerTags::class,
-            \Mpociot\ApiDoc\Extracting\Strategies\Responses\UseResponseTag::class,
-            \Mpociot\ApiDoc\Extracting\Strategies\Responses\UseResponseFileTag::class,
-            \Mpociot\ApiDoc\Extracting\Strategies\Responses\UseApiResourceTags::class,
-            \Mpociot\ApiDoc\Extracting\Strategies\Responses\ResponseCalls::class,
+            \Codise\ApiDoc\Extracting\Strategies\Responses\UseTransformerTags::class,
+            \Codise\ApiDoc\Extracting\Strategies\Responses\UseResponseTag::class,
+            \Codise\ApiDoc\Extracting\Strategies\Responses\UseResponseFileTag::class,
+            \Codise\ApiDoc\Extracting\Strategies\Responses\UseApiResourceTags::class,
+            \Codise\ApiDoc\Extracting\Strategies\Responses\ResponseCalls::class,
         ],
     ],
 ...
@@ -88,7 +88,7 @@ You can add, replace or remove strategies from here. In our case, we're adding o
 ```php
 
         'bodyParameters' => [
-            \Mpociot\ApiDoc\Extracting\Strategies\BodyParameters\GetFromBodyParamTag::class,
+            \Codise\ApiDoc\Extracting\Strategies\BodyParameters\GetFromBodyParamTag::class,
             AddOrganizationIdBodyParameter::class,
         ],
 ```
@@ -130,9 +130,9 @@ You are also provided with the instance pproperty `stage`, which is set to the n
 ## Utilities
 You have access to a number of tools when developing strategies. They include:
 
-- The `RouteDocBlocker` class (in the `\Mpociot\ApiDoc\Extracting` namespace) has a single public static method, `getDocBlocksFromRoute(Route $route)`. It allows you to retrieve the docblocks for a given route. It returns an array of with two keys: `method` and `class` containing the docblocks for the method and controller handling the route respectively. Both are instances of `\Mpociot\Reflection\DocBlock`.
+- The `RouteDocBlocker` class (in the `\Codise\ApiDoc\Extracting` namespace) has a single public static method, `getDocBlocksFromRoute(Route $route)`. It allows you to retrieve the docblocks for a given route. It returns an array of with two keys: `method` and `class` containing the docblocks for the method and controller handling the route respectively. Both are instances of `\Codise\Reflection\DocBlock`.
 
-- The `ParamsHelper` trait (in the `\Mpociot\ApiDoc\Extracting` namespace) can be included in your strategies. It contains a number of useful methods for working with parameters, including type casting and generating dummy values.
+- The `ParamsHelper` trait (in the `\Codise\ApiDoc\Extracting` namespace) can be included in your strategies. It contains a number of useful methods for working with parameters, including type casting and generating dummy values.
 
 ## API
 Each strategy class must implement the __invoke method with the parameters as described above. This method must return the needed data for the intended stage, or `null` to indicate failure.

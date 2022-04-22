@@ -1,12 +1,12 @@
 <?php
 
-namespace Mpociot\ApiDoc\Extracting\Strategies\Metadata;
+namespace Codise\ApiDoc\Extracting\Strategies\Metadata;
 
 use Illuminate\Routing\Route;
-use Mpociot\ApiDoc\Extracting\RouteDocBlocker;
-use Mpociot\ApiDoc\Extracting\Strategies\Strategy;
-use Mpociot\Reflection\DocBlock;
-use Mpociot\Reflection\DocBlock\Tag;
+use Codise\ApiDoc\Extracting\RouteDocBlocker;
+use Codise\ApiDoc\Extracting\Strategies\Strategy;
+use Codise\Reflection\DocBlock;
+use Codise\Reflection\DocBlock\Tag;
 use ReflectionClass;
 use ReflectionMethod;
 

@@ -1,19 +1,19 @@
 <?php
 
-namespace Mpociot\ApiDoc\Commands;
+namespace Codise\ApiDoc\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\URL;
-use Mpociot\ApiDoc\Extracting\Generator;
-use Mpociot\ApiDoc\Matching\RouteMatcher\Match;
-use Mpociot\ApiDoc\Matching\RouteMatcherInterface;
-use Mpociot\ApiDoc\Tools\DocumentationConfig;
-use Mpociot\ApiDoc\Tools\Flags;
-use Mpociot\ApiDoc\Tools\Utils;
-use Mpociot\ApiDoc\Writing\Writer;
-use Mpociot\Reflection\DocBlock;
+use Codise\ApiDoc\Extracting\Generator;
+use Codise\ApiDoc\Matching\RouteMatcher\Match;
+use Codise\ApiDoc\Matching\RouteMatcherInterface;
+use Codise\ApiDoc\Tools\DocumentationConfig;
+use Codise\ApiDoc\Tools\Flags;
+use Codise\ApiDoc\Tools\Utils;
+use Codise\ApiDoc\Writing\Writer;
+use Codise\Reflection\DocBlock;
 use ReflectionClass;
 use ReflectionException;
 
@@ -83,7 +83,7 @@ class GenerateDocumentation extends Command
     }
 
     /**
-     * @param \Mpociot\ApiDoc\Extracting\Generator $generator
+     * @param \Codise\ApiDoc\Extracting\Generator $generator
      * @param Match[] $routes
      *
      * @throws \ReflectionException

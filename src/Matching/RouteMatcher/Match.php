@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpociot\ApiDoc\Matching\RouteMatcher;
+namespace Codise\ApiDoc\Matching\RouteMatcher;
 
 use Illuminate\Routing\Route;
 

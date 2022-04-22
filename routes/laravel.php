@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 $prefix = config('apidoc.laravel.docs_url', '/doc');
 $middleware = config('apidoc.laravel.middleware', []);
 
-Route::namespace('\Mpociot\ApiDoc\Http')
+Route::namespace('\Codise\ApiDoc\Http')
     ->middleware($middleware)
     ->group(function () use ($prefix) {
         Route::get($prefix, 'Controller@html')->name('apidoc');
